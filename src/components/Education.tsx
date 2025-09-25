@@ -8,14 +8,16 @@ const Education = () => {
       institution: "Northeastern University – Khoury College of Computer Sciences",
       location: "Boston, MA",
       duration: "Jan 2024 – April 2026",
-      type: "Graduate"
+      type: "Graduate",
+      cgpa: "In Progress"
     },
     {
       degree: "Bachelor of Engineering in Telecommunication Engineering",
       institution: "M S Ramaiah Institute of Technology",
       location: "Bangalore, India",
       duration: "June 2015 – May 2019",
-      type: "Undergraduate"
+      type: "Undergraduate",
+      cgpa: "8.5/10.0"
     }
   ];
 
@@ -53,6 +55,11 @@ const Education = () => {
                         <span>{edu.location}</span>
                       </div>
                     </div>
+                    {edu.cgpa && (
+                      <div className="mt-3 inline-flex items-center px-3 py-1 bg-elegant-blue text-foreground text-sm rounded-full">
+                        <span className="font-medium">CGPA: {edu.cgpa}</span>
+                      </div>
+                    )}
                   </div>
                   <div className="ml-6">
                     <GraduationCap className="w-12 h-12 text-elegant-blue" />
