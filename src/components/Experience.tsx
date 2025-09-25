@@ -68,23 +68,25 @@ const Experience = () => {
             <Card key={index} className="shadow-soft transition-smooth hover:shadow-elegant bg-card/80 backdrop-blur-sm">
               <CardContent className="p-8">
                 <div className="mb-6">
-                  <div className="flex items-center mb-4">
-                    <img
-                      src={exp.logo}
-                      alt={`${exp.company} logo`}
-                      className="w-12 h-12 mr-4 object-contain"
-                    />
-                    <div>
-                      <h3 className="text-2xl font-display font-medium text-foreground">
-                        {exp.company}
-                      </h3>
-                      <div className="flex flex-wrap gap-4 text-subtle mt-1">
-                        <div className="flex items-center">
-                          <MapPin className="w-4 h-4 mr-2" />
-                          <span>{exp.location}</span>
+                  <div className="flex items-center justify-between mb-4">
+                    <div className="flex items-center">
+                      <div>
+                        <h3 className="text-2xl font-display font-medium text-foreground">
+                          {exp.company}
+                        </h3>
+                        <div className="flex flex-wrap gap-4 text-subtle mt-1">
+                          <div className="flex items-center">
+                            <MapPin className="w-4 h-4 mr-2" />
+                            <span>{exp.location}</span>
+                          </div>
                         </div>
                       </div>
                     </div>
+                    <img
+                      src={exp.logo}
+                      alt={`${exp.company} logo`}
+                      className="w-16 h-16 object-contain flex-shrink-0"
+                    />
                   </div>
                   <p className="text-xl text-elegant mb-3">
                     {exp.position}

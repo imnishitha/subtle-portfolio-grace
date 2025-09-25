@@ -1,4 +1,4 @@
-import { Mail, MapPin, Linkedin, Github } from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portraitImage from "@/assets/nishitha-portrait.jpg";
 
@@ -10,7 +10,7 @@ const Hero = () => {
           <img
             src={portraitImage}
             alt="Nishitha Madhu"
-            className="w-32 h-32 rounded-full mx-auto mb-8 shadow-elegant transition-elegant hover:scale-105"
+            className="w-32 h-32 rounded-full mx-auto mb-8 shadow-elegant transition-elegant hover:scale-105 object-cover"
           />
           <h1 className="text-5xl md:text-6xl font-display font-medium mb-6 text-foreground">
             Nishitha Madhu
@@ -25,6 +25,20 @@ const Hero = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
+          <Button 
+            variant="outline" 
+            size="lg" 
+            className="transition-smooth hover:shadow-soft"
+            onClick={() => {
+              const link = document.createElement('a');
+              link.href = '/Nishitha_Madhu_Resume.pdf';
+              link.download = 'Nishitha_Madhu_Resume.pdf';
+              link.click();
+            }}
+          >
+            <Download className="w-5 h-5 mr-2" />
+            Download Resume
+          </Button>
           <Button 
             variant="outline" 
             size="lg" 

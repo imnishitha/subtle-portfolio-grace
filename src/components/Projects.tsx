@@ -1,18 +1,22 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
 
 const Projects = () => {
   const projects = [
     {
       title: "Clinical Trial Patient Eligibility Classification",
       description: "Built a custom Byte Pair Encoding (BPE) tokenizer tailored for medical terminology, reducing out-of-vocabulary (OOV) rate by ~3% compared to pre-trained language models. Trained an LSTM-based RNN model from scratch to classify patient eligibility based on trial criteria and patient history, benchmarking against BioBERT with ~92% of its F1-score while reducing inference latency by 35% on long-form clinical text.",
-      technologies: ["NLP", "PyTorch", "Transformers", "LSTM", "BioBERT", "Medical AI"]
+      technologies: ["NLP", "PyTorch", "Transformers", "LSTM", "BioBERT", "Medical AI"],
+      link: "https://github.com/nishitha-madhu/clinical-trial-classification"
     },
     {
       title: "Cluster-Based Load Balancing for Cloud Environment",
       description: "Published research paper proposing a cluster-based load balancing algorithm to optimize resource allocation and handle dynamic workloads efficiently by clustering both load and available resources. Presented at ICTCS-2019, Udaipur, India and published in Taylor & Francis.",
       technologies: ["Cloud Computing", "Load Balancing", "Research", "Algorithm Design"],
-      publication: "ISBN: 9781003052098"
+      publication: "ISBN: 9781003052098",
+      link: "https://github.com/nishitha-madhu/cluster-load-balancer"
     }
   ];
 
@@ -47,7 +51,7 @@ const Projects = () => {
                   {project.description}
                 </p>
                 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
                     <Badge 
                       key={techIndex} 
@@ -58,6 +62,16 @@ const Projects = () => {
                     </Badge>
                   ))}
                 </div>
+                
+                <Button 
+                  variant="outline" 
+                  size="sm"
+                  onClick={() => window.open(project.link, '_blank')}
+                  className="transition-smooth hover:shadow-soft"
+                >
+                  <ExternalLink className="w-4 h-4 mr-2" />
+                  View Project
+                </Button>
               </CardContent>
             </Card>
           ))}
