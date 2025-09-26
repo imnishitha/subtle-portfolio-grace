@@ -1,4 +1,4 @@
-import { Mail, MapPin, Linkedin, Github, Download } from "lucide-react";
+import { Mail, MapPin, Linkedin, Github, Download , Phone} from "lucide-react";
 import { Button } from "@/components/ui/button";
 import portraitImage from "@/assets/nishitha-portrait.jpg";
 
@@ -15,13 +15,12 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl font-display font-medium mb-6 text-foreground">
             Nishitha Madhu
           </h1>
-          <p className="text-xl md:text-2xl text-elegant mb-4 font-light">
+          {/* <p className="text-xl md:text-2xl text-elegant mb-4 font-light">
             Software Engineer
-          </p>
+          </p> */}
           <p className="text-lg text-subtle max-w-2xl mx-auto leading-relaxed">
-            Specializing in distributed systems, healthcare technology, and machine learning. 
-            Currently pursuing M.S. in Computer Science at Northeastern University.
-          </p>
+          <b>Computer Science Master's student with 4+ years of experience building scalable, distributed software systems. Currently exploring the AI/ML space through the lens of a backend engineer, focusing on building end to end pipelines for production-grade applications.
+          </b></p>
         </div>
 
         <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -52,7 +51,7 @@ const Hero = () => {
             variant="outline" 
             size="lg" 
             className="transition-smooth hover:shadow-soft"
-            onClick={() => window.open('https://linkedin.com/in/nishitha-madhu', '_blank')}
+            onClick={() => window.open('https://www.linkedin.com/in/nishitha23/', '_blank')}
           >
             <Linkedin className="w-5 h-5 mr-2" />
             LinkedIn
@@ -61,17 +60,22 @@ const Hero = () => {
             variant="outline" 
             size="lg" 
             className="transition-smooth hover:shadow-soft"
-            onClick={() => window.open('https://github.com/nishitha-madhu', '_blank')}
+            onClick={() => window.open('https://github.com/imnishitha', '_blank')}
           >
             <Github className="w-5 h-5 mr-2" />
             GitHub
           </Button>
         </div>
 
-        <div className="flex items-center justify-center text-subtle">
-          <MapPin className="w-4 h-4 mr-2" />
-          <span>Boston, MA • (857) 376-8690</span>
-        </div>
+
+        <div className="flex items-center justify-center text-gray-500 gap-2">
+  <MapPin className="w-4 h-4 text-gray-500" />
+  <span >Boston, MA </span>
+  <a href="tel:+18573768690" className="flex items-center text-gray-500 hover:underline">
+    <Phone className="w-4 h-4 mr-1 text-gray-500" />
+    (857) 376-8690
+  </a>
+</div>
       </div>
     </section>
   );

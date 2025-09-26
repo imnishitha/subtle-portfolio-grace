@@ -6,9 +6,9 @@ const Navigation = () => {
 
   const sections = [
     { id: "hero", label: "Home" },
-    { id: "skills", label: "Skills" },
     { id: "experience", label: "Experience" },
     { id: "projects", label: "Projects" },
+    { id: "skills", label: "Skills" },
     { id: "education", label: "Education" },
     { id: "activities", label: "Activities" }
   ];

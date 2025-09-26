@@ -8,7 +8,7 @@ const Skills = () => {
     },
     {
       title: "Frameworks & Libraries",
-      skills: ["Flask", "FastAPI", "React", "Node.js", ".NET", "GraphQL", "Pandas", "Scikit-Learn", "PyTorch", "Transformers", "NLP", "LLMs"]
+      skills: ["Flask", "FastAPI", "React", "Node.js", ".NET", "GraphQL", "Pandas", "Scikit-Learn", "PyTorch", "Transformers", "NLP", "LLMs", "Hugging Face"]
     },
     {
       title: "Databases",
@@ -16,7 +16,7 @@ const Skills = () => {
     },
     {
       title: "Tools & Technologies",
-      skills: ["AWS", "Azure", "GCP", "Kafka", "Celery", "Kubernetes", "Terraform", "ArgoCD", "Jenkins", "GitHub Actions", "Grafana", "ETL"]
+      skills: ["AWS", "Microsoft Azure", "GCP", "Apache Kafka", "Celery", "Kubernetes", "Terraform", "ArgoCD", "Jenkins", "GitHub Actions", "Grafana", "ETL Pipelines", "Weights & Biases"]
     }
   ];
 

@@ -29,7 +29,7 @@ const Footer = () => {
             variant="outline" 
             size="lg" 
             className="transition-smooth hover:shadow-soft"
-            onClick={() => window.open('https://linkedin.com/in/nishitha-madhu', '_blank')}
+            onClick={() => window.open('https://www.linkedin.com/in/nishitha23/', '_blank')}
           >
             <Linkedin className="w-5 h-5 mr-2" />
             LinkedIn
@@ -38,7 +38,7 @@ const Footer = () => {
             variant="outline" 
             size="lg" 
             className="transition-smooth hover:shadow-soft"
-            onClick={() => window.open('https://github.com/nishitha-madhu', '_blank')}
+            onClick={() => window.open('https://github.com/imnishitha', '_blank')}
           >
             <Github className="w-5 h-5 mr-2" />
             GitHub

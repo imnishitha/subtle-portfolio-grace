@@ -1,21 +1,26 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Users, BookOpen, Award } from "lucide-react";
 
+
 const Activities = () => {
   const activities = [
     {
       title: "Graduate Teaching Assistant",
-      organization: "Northeastern University",
-      description: "Teaching Programming in C++ and Database Management Systems, helping students master fundamental computer science concepts and practical programming skills.",
+      organization: "C++ under Prof. Adeel Bhutta and DBMS under Prof. Kathleen Durant",
+      description:
+        "• Assisted in teaching C++ and DBMS to 100+ students by designing and grading advanced assignments and providing one-on-one support through office hours.\n" +
+        "• Collaborated with professors on curriculum design to integrate modern software engineering practices and align coursework with industry standards.",
       icon: BookOpen,
-      type: "Academic"
+      type: "Academic",
     },
     {
       title: "Technical Team Lead",
-      organization: "Disrupt – The FinTech Initiative at Northeastern University",
-      description: "Leading the technical team in developing innovative fintech solutions and organizing events to promote financial technology education and entrepreneurship.",
+      organization: "Disrupt – The FinTech Initiative",
+      description:
+        "• Led the technical team at Disrupt, driving the development of innovative financial technology solutions and organizing events that fostered entrepreneurship and industry engagement.\n" +
+        "• Designed and delivered hands-on workshops on building scalable backend solutions with Flask and SQL, equipping participants with practical skills in rapid fintech product development.",
       icon: Users,
-      type: "Leadership"
+      type: "Leadership",
     }
   ];
 
@@ -24,10 +29,10 @@ const Activities = () => {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-medium mb-6">
-            Other Activities
+            Campus Activities
           </h2>
           <p className="text-lg text-elegant max-w-2xl mx-auto">
-            Leadership roles and contributions to the academic and tech community
+            Leadership roles and contributions to the academic and tech community at Northeastern University
           </p>
         </div>
 
@@ -53,9 +58,9 @@ const Activities = () => {
                   {activity.organization}
                 </p>
                 
-                <p className="text-elegant leading-relaxed flex-grow">
+                <div className="text-elegant leading-relaxed flex-grow whitespace-pre-line">
                   {activity.description}
-                </p>
+                </div>
               </CardContent>
             </Card>
           ))}

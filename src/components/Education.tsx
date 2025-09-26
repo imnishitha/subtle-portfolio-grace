@@ -1,5 +1,8 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, MapPin, GraduationCap } from "lucide-react";
+import neuLogo from "@/assets/NEU.jpg";
+import msritLogo from "@/assets/MSRIT.png";
+
 
 const Education = () => {
   const education = [
@@ -9,7 +12,8 @@ const Education = () => {
       location: "Boston, MA",
       duration: "Jan 2024 – April 2026",
       type: "Graduate",
-      cgpa: "In Progress"
+      cgpa: "3.83/4.0",
+      logoPlaceholder: neuLogo
     },
     {
       degree: "Bachelor of Engineering in Telecommunication Engineering",
@@ -17,7 +21,8 @@ const Education = () => {
       location: "Bangalore, India",
       duration: "June 2015 – May 2019",
       type: "Undergraduate",
-      cgpa: "8.5/10.0"
+      cgpa: "8.8/10.0",
+      logoPlaceholder: msritLogo
     }
   ];
 
@@ -61,8 +66,11 @@ const Education = () => {
                       </div>
                     )}
                   </div>
-                  <div className="ml-6">
-                    <GraduationCap className="w-12 h-12 text-elegant-blue" />
+                  <div className="ml-6 flex flex-col items-center gap-3 -mt-10">
+                  <img
+    src={edu.logoPlaceholder}
+    className="w-36 h-36 object-contain"
+  />
                   </div>
                 </div>
               </CardContent>

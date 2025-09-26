@@ -7,16 +7,34 @@ const Projects = () => {
   const projects = [
     {
       title: "Clinical Trial Patient Eligibility Classification",
-      description: "Built a custom Byte Pair Encoding (BPE) tokenizer tailored for medical terminology, reducing out-of-vocabulary (OOV) rate by ~3% compared to pre-trained language models. Trained an LSTM-based RNN model from scratch to classify patient eligibility based on trial criteria and patient history, benchmarking against BioBERT with ~92% of its F1-score while reducing inference latency by 35% on long-form clinical text.",
+      description: [
+        "Built a custom Byte Pair Encoding (BPE) tokenizer tailored for medical terminology, reducing out-of-vocabulary (OOV) rate by ~3% compared to pre-trained language models.",
+        "Trained an LSTM-based RNN model from scratch to classify patient eligibility based on trial criteria and patient history, benchmarking against BioBERT with ~92% of its F1-score while reducing inference latency by 35% on long-form clinical text."
+      ],
       technologies: ["NLP", "PyTorch", "Transformers", "LSTM", "BioBERT", "Medical AI"],
-      link: "https://github.com/nishitha-madhu/clinical-trial-classification"
+      link: "https://github.com/imnishitha/Clinical-Trials-Eligibility",
+      type: "project"
+    },
+    {
+      title: "TextVault",
+      description: [
+        "Chrome extension that lets users highlight text on any webpage and automatically saves it to platforms like Notion, Google Docs or Notes on iCloud for easy reference and organization.",
+        "Supports storing the source URL, date, and highlighted text, making it easy to capture research notes, articles, and study material in one place."
+      ],
+      technologies: ["Chrome Extension", "JavaScript", "TypeScript", "Notion API", "Web Development"],
+      link: "https://github.com/imnishitha/Highlight-saver",
+      type: "project"
     },
     {
       title: "Cluster-Based Load Balancing for Cloud Environment",
-      description: "Published research paper proposing a cluster-based load balancing algorithm to optimize resource allocation and handle dynamic workloads efficiently by clustering both load and available resources. Presented at ICTCS-2019, Udaipur, India and published in Taylor & Francis.",
+      description: [
+        "Published research paper proposing a cluster-based load balancing algorithm to optimize resource allocation and handle dynamic workloads efficiently by clustering both load and available resources.",
+        "Presented at ICTCS-2019, Udaipur, India and published in Taylor & Francis."
+      ],
       technologies: ["Cloud Computing", "Load Balancing", "Research", "Algorithm Design"],
       publication: "ISBN: 9781003052098",
-      link: "https://github.com/nishitha-madhu/cluster-load-balancer"
+      link: "https://www.taylorfrancis.com/chapters/edit/10.1201/9781003052098-76/cluster-based-load-balancing-cloud-environment-nishitha-syed-mudassir-hussain-shobha",
+      type: "paper"
     }
   ];
 
@@ -41,15 +59,20 @@ const Projects = () => {
                     {project.title}
                   </h3>
                   {project.publication && (
-                    <p className="text-sm text-elegant-blue mb-4 font-medium">
+                    <p className="text-sm text-gray-700 dark:text-gray-400 mb-4 font-semibold">
                       Publication: {project.publication}
                     </p>
                   )}
                 </div>
                 
-                <p className="text-elegant leading-relaxed mb-6">
-                  {project.description}
-                </p>
+                <div className="text-elegant leading-relaxed mb-6">
+                  {project.description.map((point, pointIndex) => (
+                    <p key={pointIndex} className="mb-3 flex items-start">
+                      <span className="text-elegant-blue mr-2 mt-1">•</span>
+                      <span>{point}</span>
+                    </p>
+                  ))}
+                </div>
                 
                 <div className="flex flex-wrap gap-2 mb-6">
                   {project.technologies.map((tech, techIndex) => (
@@ -70,7 +93,7 @@ const Projects = () => {
                   className="transition-smooth hover:shadow-soft"
                 >
                   <ExternalLink className="w-4 h-4 mr-2" />
-                  View Project
+                  {project.type === "paper" ? "View Paper" : "View Project"}
                 </Button>
               </CardContent>
             </Card>

@@ -15,10 +15,10 @@ const Experience = () => {
       duration: "Jan 2025 – Dec 2025 (12 months)",
       achievements: [
         "Engineered a distributed YugabyteDB system for a hospital patient monitoring cloud platform, enabling real-time data ingestion from **10,000+ bedside monitoring devices**.",
-        "Optimized C# microservices with a bulk insertion pipeline, cutting processing time by **75% (20s to 5s)** for high-volume data streams.",
-        "Orchestrated load testing (**10k+ users, 5M+ records**) and migration of **120+ tables, 40+ SPs, and 20TB** of patient data from MySQL to PostgreSQL with near-zero downtime.",
-        "Spearheaded research on reducing battery-related alarm fatigue with ML models (AdaBoost, Random Forest, Gradient Boosting), running **5+ PoCs** and cutting false alerts by **30%**.",
-        "Built an auto-logging tool with GitHub Actions and Azure DevOps Boards to auto-link test cases to requirements and generate release reports."
+        "Optimized C# microservices with a bulk insertion pipeline, **cutting processing time by 75% (20s to 5s)** for high-volume data streams.",
+        "Orchestrated load testing (**10k+ users, 5M+ records**) and migration of **120+ tables, 40+ SPs, and 20TB** of patient data from MySQL to PostgreSQL with **near-zero downtime**.",
+        "Spearheaded research on reducing battery-related alarm fatigue with ML models (AdaBoost, Random Forest, Gradient Boosting), **running 5+ PoCs and cutting false alerts by 30%**.",
+        "Built an auto-logging CLI tool with GitHub Actions and Azure DevOps Boards to auto-link test cases to requirements while generating comprehensive release reports, accelerating release cycles."
       ],
       skills: ["C#", "YugabyteDB", "PostgreSQL", "Azure DevOps", "GitHub Actions", "Machine Learning", "Microservices"]
     },
@@ -29,11 +29,11 @@ const Experience = () => {
       position: "Software Engineer (2020-2022) | Senior Software Engineer (2022-2023)",
       duration: "June 2020 – Dec 2023 (3.5 years)",
       achievements: [
-        "Designed and implemented resilient data pipelines to integrate FDA-approved health monitoring devices into the Remote Patient Monitoring (RPM) platform, supporting up to **10,000 active patients**.",
-        "Led the migration of the entire application from AWS DynamoDB to a self-hosted TSDB, significantly reducing operational costs by **70%**.",
+        "Designed and implemented resilient data pipelines to integrate FDA-approved health monitoring devices into the Remote Patient Monitoring (RPM) platform, supporting up to **30,000 active patients**.",
+        "Led the migration of the entire application from AWS DynamoDB to a self-hosted TSDB, significantly **reducing operational costs by 70%**.",
         "Optimized loading time of vitals graphs on web dashboard from **3 minutes to less than 3 seconds** by migrating from Flask to FastAPI.",
-        "Engineered EMR/EHR integration systems using HL7 interfaces and FHIR standards on the RPM platform, ensuring encryption, compliance, and interoperability.",
-        "Orchestrated CI/CD pipelines using Jenkins and Bitbucket to streamline continuous deployment processes."
+        "Engineered EMR/EHR integration systems using HL7 interfaces and FHIR standards on the RPM platform, ensuring encryption, compliance, and interoperability, successfully **integrating 15+ hospital systems and handling over 200,000 patient records** securely.",
+        "Orchestrated CI/CD pipelines using Jenkins and Bitbucket, **reducing deployment times by 40% and enabling 3x faster** release cycles."
       ],
       skills: ["Python", "Flask", "FastAPI", "AWS DynamoDB", "TimescaleDB", "HL7/FHIR", "Jenkins", "Kafka", "ETL"]
     },
@@ -85,7 +85,7 @@ const Experience = () => {
                     <img
                       src={exp.logo}
                       alt={`${exp.company} logo`}
-                      className="w-16 h-16 object-contain flex-shrink-0"
+                      className="w-24 h-24 object-contain flex-shrink-0"
                     />
                   </div>
                   <p className="text-xl text-elegant mb-3">
