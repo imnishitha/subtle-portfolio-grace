@@ -15,9 +15,13 @@ const Hero = () => {
           <h1 className="text-5xl md:text-6xl font-display font-medium mb-6 text-foreground">
             Nishitha Madhu
           </h1>
+          <div className="text-lg text-subtle max-w-2xl mx-auto leading-relaxed">
+<b>Hello World!</b>
+  </div>
+  <br></br>
           <p className="text-lg text-subtle max-w-2xl mx-auto leading-relaxed">
-          <b>Computer Science Master's student with 4+ years of experience building scalable and distributed software systems. Currently exploring the AI/ML space through the lens of a backend engineer, focusing on building end-to-end pipelines for production-grade applications.
-          </b></p>
+          I am a Computer Science Master's student with 4+ years of experience building scalable and distributed software systems. Currently exploring the AI/ML space through the lens of a backend engineer, focusing on building end-to-end pipelines for production-grade applications.
+          </p>
         </div>
 
         <div className="text-black font-bold text-center">

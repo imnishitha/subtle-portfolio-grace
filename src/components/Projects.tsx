@@ -43,10 +43,10 @@ const Projects = () => {
       <div className="max-w-4xl mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-display font-medium mb-6">
-            Featured Projects
+            Projects
           </h2>
           <p className="text-lg text-elegant max-w-2xl mx-auto">
-            Research and development projects showcasing innovation in machine learning and distributed systems
+            Academic and personal projects showcasing curiosity, innovation and technical skills
           </p>
         </div>
 

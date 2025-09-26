@@ -17,7 +17,7 @@ const Activities = () => {
       title: "Technical Team Lead",
       organization: "Disrupt – The FinTech Initiative",
       description:
-        "• Led the technical team at Disrupt, driving the development of innovative financial technology solutions and organizing events that fostered entrepreneurship and industry engagement.\n" +
+        "• Led the technical team at Disrupt, a fintech club at Northeastern University, driving the development of innovative financial technology solutions and organizing events that fostered entrepreneurship and industry engagement.\n" +
         "• Designed and delivered hands-on workshops on building scalable backend solutions with Flask and SQL, equipping participants with practical skills in rapid fintech product development.",
       icon: Users,
       type: "Leadership",
