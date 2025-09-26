@@ -1,22 +1,51 @@
-import { Card, CardContent } from "@/components/ui/card";
-
 const Skills = () => {
   const skillCategories = [
     {
       title: "Languages",
-      skills: ["Python", "C", "C++", "C#", "Java", "JavaScript", "SQL"]
+      skills: [
+        { name: "Python", icon: "🐍" },
+        { name: "C", icon: "⚡" },
+        { name: "C++", icon: "⚡" },
+        { name: "C#", icon: "#️⃣" },
+        { name: "Java", icon: "☕" },
+        { name: "JavaScript", icon: "🟨" },
+        { name: "SQL", icon: "🗃️" }
+      ]
     },
     {
-      title: "Frameworks & Libraries",
-      skills: ["Flask", "FastAPI", "React", "Node.js", ".NET", "GraphQL", "Pandas", "Scikit-Learn", "PyTorch", "Transformers", "NLP", "LLMs", "Hugging Face"]
+      title: "Web Development",
+      skills: [
+        { name: "React", icon: "⚛️" },
+        { name: "Node.js", icon: "🟢" },
+        { name: "Flask", icon: "🌶️" },
+        { name: "FastAPI", icon: "⚡" },
+        { name: ".NET", icon: "🔷" },
+        { name: "GraphQL", icon: "🔗" }
+      ]
     },
     {
-      title: "Databases",
-      skills: ["MySQL", "PostgreSQL", "Timescale DB", "YugabyteDB", "Redis", "MongoDB", "DynamoDB"]
+      title: "Cloud & Database",
+      skills: [
+        { name: "AWS", icon: "☁️" },
+        { name: "Microsoft Azure", icon: "🔵" },
+        { name: "GCP", icon: "🌥️" },
+        { name: "MySQL", icon: "🐬" },
+        { name: "PostgreSQL", icon: "🐘" },
+        { name: "MongoDB", icon: "🍃" },
+        { name: "Redis", icon: "🔴" }
+      ]
     },
     {
-      title: "Tools & Technologies",
-      skills: ["AWS", "Microsoft Azure", "GCP", "Apache Kafka", "Celery", "Kubernetes", "Terraform", "ArgoCD", "Jenkins", "GitHub Actions", "Grafana", "ETL Pipelines", "Weights & Biases"]
+      title: "AI/ML & Tools",
+      skills: [
+        { name: "PyTorch", icon: "🔥" },
+        { name: "Scikit-Learn", icon: "🤖" },
+        { name: "Pandas", icon: "🐼" },
+        { name: "Kubernetes", icon: "☸️" },
+        { name: "Docker", icon: "🐳" },
+        { name: "Jenkins", icon: "👷" },
+        { name: "Terraform", icon: "🏗️" }
+      ]
     }
   ];
 
@@ -32,25 +61,33 @@ const Skills = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="space-y-12">
           {skillCategories.map((category, index) => (
-            <Card key={index} className="shadow-soft transition-smooth hover:shadow-elegant bg-card/50 backdrop-blur-sm">
-              <CardContent className="p-8">
-                <h3 className="text-xl font-display font-medium mb-6 text-foreground">
+            <div key={index} className="flex flex-col lg:flex-row gap-6 items-start">
+              <div className="lg:w-48 flex-shrink-0">
+                <h3 className="text-xl font-display font-medium text-foreground">
                   {category.title}
                 </h3>
-                <div className="flex flex-wrap gap-3">
+              </div>
+              
+              <div className="flex-1">
+                <div className="flex flex-wrap gap-4">
                   {category.skills.map((skill, skillIndex) => (
-                    <span
+                    <div
                       key={skillIndex}
-                      className="px-4 py-2 bg-elegant-blue text-foreground text-sm rounded-full transition-smooth hover:bg-elegant-accent"
+                      className="group flex flex-col items-center p-4 bg-card/50 backdrop-blur-sm rounded-lg border border-border/50 transition-all duration-300 hover:shadow-soft hover:bg-card/80 hover:border-primary/20"
                     >
-                      {skill}
-                    </span>
+                      <div className="text-3xl mb-2 group-hover:scale-110 transition-transform duration-300">
+                        {skill.icon}
+                      </div>
+                      <span className="text-sm font-medium text-foreground text-center">
+                        {skill.name}
+                      </span>
+                    </div>
                   ))}
                 </div>
-              </CardContent>
-            </Card>
+              </div>
+            </div>
           ))}
         </div>
       </div>
