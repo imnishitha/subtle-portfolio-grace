@@ -20,6 +20,13 @@ const Hero = () => {
           </b></p>
         </div>
 
+        <div className="text-black font-bold text-center">
+Open to full-time opportunities starting May, 2026
+  </div>
+
+  <br />
+  <br />
+
         <div className="flex flex-wrap justify-center gap-4 mb-12">
           <Button 
             variant="outline" 
@@ -72,7 +79,9 @@ const Hero = () => {
     <Phone className="w-4 h-4 mr-1 text-gray-500" />
     (857) 376-8690
   </a>
+ 
 </div>
+
       </div>
     </section>
   );
