@@ -45,7 +45,7 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-display font-medium mb-6">
             Projects
           </h2>
-          <p className="text-lg text-elegant max-w-2xl mx-auto">
+          <p className="text-lg text-elegant max-w-2xl mx-auto text-justify">
             Academic and personal projects showcasing curiosity, innovation and technical skills
           </p>
         </div>
@@ -67,7 +67,7 @@ const Projects = () => {
                 
                 <div className="text-elegant leading-relaxed mb-6">
                   {project.description.map((point, pointIndex) => (
-                    <p key={pointIndex} className="mb-3 flex items-start">
+                    <p key={pointIndex} className="mb-3 flex items-start text-justify">
                       <span className="text-elegant-blue mr-2 mt-1">•</span>
                       <span>{point}</span>
                     </p>

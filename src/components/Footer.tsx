@@ -9,7 +9,7 @@ const Footer = () => {
           <h3 className="text-2xl font-display font-medium text-foreground mb-4">
             Let's Connect
           </h3>
-          <p className="text-elegant max-w-2xl mx-auto leading-relaxed">
+          <p className="text-elegant max-w-2xl mx-auto leading-relaxed text-justify">
             I'm always interested in discussing new opportunities, collaborating on exciting projects, 
             or simply connecting with fellow engineers and researchers.
           </p>

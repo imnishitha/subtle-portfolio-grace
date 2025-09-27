@@ -99,7 +99,7 @@ const Experience = () => {
                 
                 <ul className="space-y-3 mb-6">
                   {exp.achievements.map((achievement, achIndex) => (
-                    <li key={achIndex} className="text-foreground leading-relaxed flex">
+                    <li key={achIndex} className="text-foreground leading-relaxed flex text-justify">
                       <span className="text-elegant-blue mr-3 mt-2">•</span>
                       <span 
                         dangerouslySetInnerHTML={{ 

@@ -19,7 +19,7 @@ const Hero = () => {
 <b>Hello World!</b>
   </div>
   <br></br>
-          <p className="text-lg text-subtle max-w-2xl mx-auto leading-relaxed">
+          <p className="text-lg text-subtle max-w-2xl mx-auto leading-relaxed text-justify">
           I am a Computer Science Master's student with 4+ years of experience building scalable and distributed software systems. Currently exploring the AI/ML space through the lens of a backend engineer, focusing on building end-to-end pipelines for production-grade applications.
           </p>
         </div>
