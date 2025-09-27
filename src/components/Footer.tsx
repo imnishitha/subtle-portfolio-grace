@@ -15,7 +15,7 @@ const Footer = () => {
           </p>
         </div>
 
-        <div className="flex justify-center gap-4 mb-12">
+        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-12">
           <Button 
             variant="outline" 
             size="lg" 

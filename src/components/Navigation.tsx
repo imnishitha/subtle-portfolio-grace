@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { Menu } from "lucide-react";
 
 const Navigation = () => {
   const [activeSection, setActiveSection] = useState("hero");
@@ -59,6 +61,32 @@ const Navigation = () => {
                 {label}
               </Button>
             ))}
+          </div>
+
+          {/* Mobile Menu */}
+          <div className="md:hidden">
+            <Sheet>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="sm">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-[250px]">
+                <div className="flex flex-col space-y-4 mt-8">
+                  {sections.map(({ id, label }) => (
+                    <Button
+                      key={id}
+                      variant={activeSection === id ? "secondary" : "ghost"}
+                      size="sm"
+                      onClick={() => scrollToSection(id)}
+                      className="justify-start transition-smooth"
+                    >
+                      {label}
+                    </Button>
+                  ))}
+                </div>
+              </SheetContent>
+            </Sheet>
           </div>
         </div>
       </div>

@@ -42,8 +42,8 @@ const Education = () => {
           {education.map((edu, index) => (
             <Card key={index} className="shadow-soft transition-smooth hover:shadow-elegant bg-card/80 backdrop-blur-sm">
               <CardContent className="p-8">
-                <div className="flex items-start justify-between mb-4">
-                  <div className="flex-1">
+                <div className="flex flex-col md:flex-row items-start md:items-start justify-between mb-4 gap-6">
+                  <div className="flex-1 w-full">
                     <h3 className="text-2xl font-display font-medium text-foreground mb-2">
                       {edu.degree}
                     </h3>
@@ -66,11 +66,12 @@ const Education = () => {
                       </div>
                     )}
                   </div>
-                  <div className="ml-6 flex flex-col items-center gap-3 -mt-10">
-                  <img
-    src={edu.logoPlaceholder}
-    className="w-36 h-36 object-contain"
-  />
+                  <div className="flex-shrink-0 self-center md:self-start">
+                    <img
+                      src={edu.logoPlaceholder}
+                      alt={`${edu.institution} logo`}
+                      className="w-24 h-24 md:w-36 md:h-36 object-contain"
+                    />
                   </div>
                 </div>
               </CardContent>
