@@ -58,7 +58,7 @@ const Activities = () => {
                   {activity.organization}
                 </p>
                 
-                <div className="text-elegant leading-relaxed flex-grow whitespace-pre-line">
+                <div className="text-elegant leading-relaxed flex-grow whitespace-pre-line text-justify">
                   {activity.description}
                 </div>
               </CardContent>
