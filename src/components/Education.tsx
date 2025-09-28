@@ -14,7 +14,7 @@ const Education = () => {
       type: "Graduate",
       cgpa: "3.83/4.0",
       logoPlaceholder: neuLogo,
-      courses: ["Course1", "Course2", "Course3", "Course4", "Course5", "Course6", "Course7"]
+      courses: ["Algorithms","Programming Design Paradigm", "Database Management Systems","Cloud Computing", "Natural Languagae Processing", "MLOps"]
     },
     {
       degree: "Bachelor of Engineering in Telecommunication Engineering",
@@ -24,7 +24,7 @@ const Education = () => {
       type: "Undergraduate",
       cgpa: "8.8/10.0",
       logoPlaceholder: msritLogo,
-      courses: ["Course1", "Course2", "Course3", "Course4", "Course5", "Course6", "Course7"]
+      courses: ["Data Structures", "Object Oriented Programming", "Operation Systems", "Communication Networks", "Network Security", "Web Development"]
     }
   ];
 
