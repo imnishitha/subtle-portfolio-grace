@@ -13,7 +13,8 @@ const Education = () => {
       duration: "Jan 2024 – April 2026",
       type: "Graduate",
       cgpa: "3.83/4.0",
-      logoPlaceholder: neuLogo
+      logoPlaceholder: neuLogo,
+      courses: ["Course1", "Course2", "Course3", "Course4", "Course5", "Course6", "Course7"]
     },
     {
       degree: "Bachelor of Engineering in Telecommunication Engineering",
@@ -22,7 +23,8 @@ const Education = () => {
       duration: "June 2015 – May 2019",
       type: "Undergraduate",
       cgpa: "8.8/10.0",
-      logoPlaceholder: msritLogo
+      logoPlaceholder: msritLogo,
+      courses: ["Course1", "Course2", "Course3", "Course4", "Course5", "Course6", "Course7"]
     }
   ];
 
@@ -63,6 +65,21 @@ const Education = () => {
                     {edu.cgpa && (
                       <div className="mt-3 inline-flex items-center px-3 py-1 bg-elegant-blue text-foreground text-sm rounded-full">
                         <span className="font-medium">CGPA: {edu.cgpa}</span>
+                      </div>
+                    )}
+                    {edu.courses && (
+                      <div className="mt-4">
+                        <h4 className="text-sm font-medium text-elegant mb-2">Relevant Coursework:</h4>
+                        <div className="flex flex-wrap gap-2">
+                          {edu.courses.map((course, courseIndex) => (
+                            <span
+                              key={courseIndex}
+                              className="px-2 py-1 bg-subtle text-xs rounded text-muted-foreground"
+                            >
+                              {course}
+                            </span>
+                          ))}
+                        </div>
                       </div>
                     )}
                   </div>
