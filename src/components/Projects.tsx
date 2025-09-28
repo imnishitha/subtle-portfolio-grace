@@ -45,7 +45,7 @@ const Projects = () => {
           <h2 className="text-4xl md:text-5xl font-display font-medium mb-6">
             Projects
           </h2>
-          <p className="text-lg text-elegant max-w-2xl mx-auto text-justify">
+          <p className="text-lg text-elegant max-w-2xl mx-auto">
             Academic and personal projects showcasing curiosity, innovation and technical skills
           </p>
         </div>
