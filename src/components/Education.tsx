@@ -2,6 +2,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Calendar, MapPin, GraduationCap } from "lucide-react";
 import neuLogo from "@/assets/NEU.jpg";
 import msritLogo from "@/assets/MSRIT.png";
+import { Badge } from "./ui/badge";
 
 
 const Education = () => {
@@ -70,16 +71,17 @@ const Education = () => {
                     {edu.courses && (
                       <div className="mt-4">
                         <h4 className="text-sm font-medium text-elegant mb-2">Relevant Coursework:</h4>
-                        <div className="flex flex-wrap gap-2">
-                          {edu.courses.map((course, courseIndex) => (
-                            <span
-                              key={courseIndex}
-                              className="px-2 py-1 bg-subtle text-xs rounded text-muted-foreground"
-                            >
-                              {course}
-                            </span>
-                          ))}
-                        </div>
+                        <div className="flex flex-wrap gap-2 mb-6">
+                  {edu.courses.map((course, courseIndex) => (
+                    <Badge 
+                      key={courseIndex} 
+                      variant="secondary" 
+                      className="bg-elegant-blue hover:bg-elegant-accent transition-smooth"
+                    >
+                      {course}
+                    </Badge>
+                  ))}
+                </div>
                       </div>
                     )}
                   </div>
